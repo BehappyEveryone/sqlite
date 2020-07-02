@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingLeft="20.0dip"
+    android:paddingTop="10.0dip"
+    android:paddingRight="20.0dip"
+    android:paddingBottom="10.0dip">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" 내 정보"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textColor="#ffb0797d" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/me_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:maxLength="15"
+                        android:singleLine="true"
+                        android:text="내이름"
+                        android:textColor="#ff818181" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/me_birthday"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/radio_user_birth"
+                            android:layout_weight="1.0"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:onClick="onClick"
+                            android:text="1991년 8월 4일"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ff818181" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/me_birthtime"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_below="@+id/input_birth"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:onClick="onClick"
+                            android:text="11:30~13:30"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ff818181" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/me_birth"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:checkedButton="@+id/me_birth_solar"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/me_birth_solar"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:text="양력"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ffb0797d" />
+
+                        <RadioButton
+                            android:id="@+id/me_birth_lunar"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:text="음력"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ffb0797d" />
+
+                        <RadioButton
+                            android:id="@+id/me_birth_lunar_leap"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:text="음력윤달"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ffb0797d" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="5.0dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/me_sex"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:checkedButton="@+id/me_sex_man"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/me_sex_man"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:text="남자"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ffb0797d" />
+
+                        <RadioButton
+                            android:id="@+id/me_sex_woman"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:text="여자"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ffb0797d" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" 상대방 정보"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textColor="#ffb0797d" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/partner_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:maxLength="15"
+                        android:singleLine="true"
+                        android:text="상대이름"
+                        android:textColor="#ff818181" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/partner_birthday"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:onClick="onClick"
+                            android:text="1991년 8월 4일"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ff818181" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/partner_birthtime"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:onClick="onClick"
+                            android:text="11:30~13:30"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ff818181" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/partner_birth"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:checkedButton="@+id/partner_birth_solar"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@id/partner_birth_solar"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:text="양력"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ffb0797d" />
+
+                        <RadioButton
+                            android:id="@+id/partner_birth_lunar"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:text="음력"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ffb0797d" />
+
+                        <RadioButton
+                            android:id="@+id/partner_birth_lunar_leap"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:text="음력윤달"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ffb0797d" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="5.0dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/partner_sex"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:checkedButton="@+id/partner_sex_woman"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/partner_sex_man"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:text="남자"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ffb0797d" />
+
+                        <RadioButton
+                            android:id="@+id/partner_sex_woman"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:text="여자"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#ffb0797d" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/user_save"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.0"
+                android:text="저장"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

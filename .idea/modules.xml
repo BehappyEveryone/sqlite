@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FortuneApp.iml" filepath="$PROJECT_DIR$/FortuneApp.iml" group="FortuneApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FortuneApp-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FortuneApp-app.iml" group="FortuneApp/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="FortuneApp/app" />
     </modules>
   </component>
